@@ -1,0 +1,72 @@
+@font-face {
+	font-family: "icon";
+	src: url('../font/icon/icon.eot');
+	src: url('../font/icon/icon.eot?#iefix') format('eot'),
+		url('../font/icon/icon.woff2') format('woff2'),
+		url('../font/icon/icon.woff') format('woff'),
+		url('../font/icon/icon.ttf') format('truetype'),
+		url('../font/icon/icon.svg#icon') format('svg');
+}
+
+.icon-base-pseudo {
+	font-family: "icon";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+.icon-char(@filename) {
+	@beat: "\E001";
+	@check: "\E002";
+	@contact: "\E003";
+	@deals: "\E004";
+	@departure: "\E005";
+	@enddate: "\E006";
+	@help: "\E007";
+	@home: "\E008";
+	@startingdate: "\E009";
+	
+	content: @@filename;
+}
+
+.icon(@filename, @insert: before) {
+	@pseudo-selector: ~":@{insert}";
+
+	&@{pseudo-selector} {
+		&:extend(.icon-base-pseudo);
+		.icon-char(@filename);
+	}
+}
+
+.icon-beat {
+	.icon(beat);
+}
+.icon-check {
+	.icon(check);
+}
+.icon-contact {
+	.icon(contact);
+}
+.icon-deals {
+	.icon(deals);
+}
+.icon-departure {
+	.icon(departure);
+}
+.icon-enddate {
+	.icon(enddate);
+}
+.icon-help {
+	.icon(help);
+}
+.icon-home {
+	.icon(home);
+}
+.icon-startingdate {
+	.icon(startingdate);
+}

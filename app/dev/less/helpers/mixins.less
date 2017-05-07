@@ -1,0 +1,81 @@
+// opacity mixin
+.opacity(@value) {
+  -webkit-opacity: @value;
+     -moz-opacity: @value;
+          opacity: @value;
+  @opperc: @value * 100;
+       -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+           filter: ~"alpha(opacity=@{opperc})";
+}
+
+// transition mixin
+.transition(...) {
+  -webkit-transition: @arguments;
+     -moz-transition: @arguments;
+      -ms-transition: @arguments;
+       -o-transition: @arguments;
+          transition: @arguments;
+}
+
+// transform mixin
+.transform(...) {
+  -webkit-transform: @arguments;
+     -moz-transform: @arguments;
+      -ms-transform: @arguments;
+       -o-transform: @arguments;
+          transform: @arguments;
+}
+
+// gradient background mixin
+.background-gradient(@value1, @value2, @start) {
+  background: @value1;
+  background: -moz-linear-gradient(top, @value1 @start, @value2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(@start, @value1), color-stop(100%, @value2));
+  background: -webkit-linear-gradient(top, @value1 @start, @value2 100%);
+  background: -o-linear-gradient(top, @value1 @start, @value2 100%);
+  background: -ms-linear-gradient(top, @value1 @start, @value2 100%);
+  background: linear-gradient(to bottom, @value1 @start, @value2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@value1', endColorstr='@value2', GradientType=0);
+}
+
+// border-radius mixin
+.border-radius(...) {
+  -webkit-border-radius: @arguments;
+     -moz-border-radius: @arguments;
+      -ms-border-radius: @arguments;
+       -o-border-radius: @arguments;
+          border-radius: @arguments;
+}
+
+// box-shadow mixin
+.box-shadow(...) {
+  -webkit-box-shadow: @arguments;
+     -moz-box-shadow: @arguments;
+      -ms-box-shadow: @arguments;
+       -o-box-shadow: @arguments;
+          box-shadow: @arguments;
+}
+
+// background size mixin
+.background-size(...) {
+  -webkit-background-size: @arguments;
+     -moz-background-size: @arguments;
+      -ms-background-size: @arguments;
+       -o-background-size: @arguments;
+          background-size: @arguments;
+}
+
+// user select mixin
+.user-select(...) {
+  -webkit-user-select: @arguments;
+     -moz-user-select: @arguments;
+      -ms-user-select: @arguments;
+          user-select: @arguments;
+}
+
+// appearance mixin
+.appearance(...) {
+  -webkit-appearance: @arguments;
+     -moz-appearance: @arguments;
+          appearance: @arguments;
+}

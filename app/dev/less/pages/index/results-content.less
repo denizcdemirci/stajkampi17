@@ -1,0 +1,183 @@
+// --------------------------------------------------
+// results content
+// --------------------------------------------------
+.results .results-content {
+  background-color: #fff;
+  .box-shadow(0px 1px 5px 0px rgba(0, 0, 0, 0.23));
+  .border-radius(2px);
+}
+
+.results .results-content .content-title {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.results .results-content .content-title p {
+  font-size: 11px;
+  color: @black-light;
+}
+
+.results .results-content .content-item {
+  padding: 24px;
+  border-bottom: 1px solid #e1e1e1;
+  .transition(all 100ms);
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.results .results-content .content-item.selected {
+  background-color: #f6f7f9;
+}
+
+.results .results-content .content-item .price {
+  padding: 15px 15px;
+  background-color: #f6f7f9;
+  .border-radius(2px);
+}
+
+.results .results-content .content-item .logo {
+  margin: 0px;
+  position: absolute;
+  top: 50%;
+  .transform(translate(0, -50%));
+}
+
+.results .results-content .content-item .logo.logo-anadolujet {
+  .sprite(@anadolujet);
+}
+
+.results .results-content .content-item .logo.logo-lufthansa {
+  .sprite(@lufthansa);
+}
+
+.results .results-content .content-item .logo.logo-pegasus {
+  .sprite(@pegasus);
+}
+
+.results .results-content .content-item .logo.logo-turkishairlines {
+  .sprite(@turkishairlines);
+}
+
+.results .results-content .content-item p {
+  font-size: 11px;
+  color: @black-light;
+  line-height: inherit;
+  span {
+    font-family: @default-font;
+    font-size: 18px;
+    color: #3e4146;
+  }
+}
+
+.results .results-content .content-item p.departure-time,
+.results .results-content .content-item p.landing-time,
+.results .results-content .content-item p.transfer {
+  margin: 0px;
+  position: absolute;
+  top: 50%;
+  .transform(translate(0, -50%));
+}
+
+.results .results-content .content-item p.transfer span {
+  font-size: 16px;
+}
+
+.results .results-content .content-item .price button {
+  width: 100%;
+  height: 36px;
+  font-family: @default-font;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  background: @blue-dark;
+  .border-radius(2px);
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.results .results-content .content-item .details {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e1e1e1;
+  display: none;
+}
+
+.results .results-content .content-item .details .routes {
+  padding: 22px 0px;
+  background-color: #fff;
+  .border-radius(2px);
+  .box-shadow(inset -7px 0px 0px 0px #f6f7f9);
+}
+
+.results .results-content .content-item .details .routes .row {
+  margin-bottom: 26px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.results .results-content .content-item .details .routes p span {
+  font-family: @default-font;
+  font-size: 14px;
+  color: #3e4146;
+}
+
+.results .results-content .content-item .details .routes .timeline {
+  width: 80%;
+  text-align: center;
+}
+
+.results .results-content .content-item .details .routes .timeline p {
+  margin-bottom: 10px;
+  font-size: 11px;
+  color: @black-light;
+}
+
+.results .results-content .content-item .details .routes .timeline .line {
+  width: 100%;
+  height: 1px;
+  position: relative;
+  background-color: @gray;
+  &::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    background-color: @gray;
+    .border-radius(50%);
+  }
+  &::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    background-color: @gray;
+    .border-radius(50%);
+  }
+}
+
+.results .results-content .content-item .details .prices {
+  padding: 18px 15px;
+  background-color: #fff;
+  .border-radius(2px);
+  .box-shadow(inset 7px 0px 0px 0px #f6f7f9);
+}
+
+.results .results-content .content-item .details .prices p {
+  margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.results .results-content .content-item .details .prices span {
+  margin-right: 14px;
+  font-family: @default-font;
+  font-size: 12px;
+  color: @black-light;
+}

@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box; /* 1 */
+  font-weight: normal;
+  font-size: 100%;
+  line-height: normal;
+  font-family: sans-serif;
+  color: #000;
+  background-color: #fff;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; /* 1 */
+}
+
+body, input, textarea, select, button {
+  outline: 0;
+  border: 0;
+  text-rendering: optimizeLegibility; /* 2 */
+  -webkit-font-smoothing: antialiased; /* 3 */
+  -moz-osx-font-smoothing: grayscale; /* 4 */
+  font-feature-settings: "liga", "kern"; /* 5 */
+  font-kerning: normal; /* 6 */
+}
+
+p {
+  //hyphens: auto; /* 7 */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 8 */
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, figure, p, pre, fieldset, ul, ol {
+  margin: 0;
+}
+
+button, fieldset, iframe {
+  border: 0;
+}
+
+fieldset, ul, ol, button {
+  padding: 0;
+}
+
+button {
+  background: transparent;
+}
+
+textarea {
+  resize: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.select select {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border: none;
+  .box-shadow(none);
+  background-color: transparent;
+  background-image: none;
+  .appearance(none);
+}
+
+.select select:focus {
+  outline: none;
+}
